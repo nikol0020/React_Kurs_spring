@@ -1,14 +1,27 @@
 .header {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 200px;
   background-color: #aff;
-  position: relative;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__block-common {
+    margin: 50px 125px -10px;
+  }
+
+  &__buttons-wraper {
+    font-size: 12px;
+
+    & > button {
+      margin: 0 20px;
+
+    }
+  }
 }
-.header__buttons{
-  display: flex;
-  justify-content: space-evenly;
-}
-.header__buttons-wraper > button {
-  margin: 0 20px;
-}
+

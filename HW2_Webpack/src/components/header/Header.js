@@ -7,15 +7,19 @@ export default class Header extends Component {
     render() {
         return (
             <div className="header">
-                <Search/>
-                <br/>
-                <div className="header__buttons">
-                    <div className="header__buttons-wraper">
-                        <span>Search by</span>
-                        <Button/>
+                <div  className="header__block-common">
+                    <span className="header__text">FIND YOUR MOVIE</span>
+                    <br/>
+                    <Search/>
+                    <hr/>
+                    <div className="header__buttons">
+                        <div className="header__buttons-wraper">
+                            <span>SEARCH BY</span>
+                            <Button/>
+                            <Button/>
+                        </div>
                         <Button/>
                     </div>
-                    <Button/>
                 </div>
             </div>
         );
