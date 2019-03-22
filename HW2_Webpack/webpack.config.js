@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = (env, argv) => {
     return {
         mode: env.production ? 'production' : 'development',
-
         entry: "./src/index.js",
         output: {
             path: path.join(__dirname, "/dist"),

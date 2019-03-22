@@ -4,7 +4,7 @@ import './Button.scss';
 export default class Button extends Component {
     render(){
         return(
-            <button className="button" disabled>some text</button>
+            <input type="text" className="button" disabled></input>
         )
     }
 }

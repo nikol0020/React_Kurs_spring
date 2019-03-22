@@ -6,9 +6,9 @@ export default class List extends Component {
 
     render() {
 
-      const  elements = this.props.data.map((item) => {
+        const elements = this.props.data.map((item) => {
 
-            const { id, ...itemProps } = item;
+            const {id, ...itemProps} = item;
 
             return (
                 <li key={ id }>
@@ -16,7 +16,6 @@ export default class List extends Component {
                 </li>
             )
         });
-
 
         return (
             <ul className="list">

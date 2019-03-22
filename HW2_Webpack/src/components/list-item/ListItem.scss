@@ -1,29 +1,36 @@
 .list-item {
-  width: 150px;
-  height: 320px;
+  width: 200px;
+  height: 360px;
   background-color: #fcc;
   margin: 20px;
-}
-.list-item__image {
-  min-width: 150px;
-  min-height: 200px;
-  background-color: #bbf;
-}
-.list-item__short-description {
-  margin: 10px;
-}
-.list-item__title {
-   color: #33f;
- }
-.list-item__genre {
-  float: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 50%;
-}
-.list-item__year {
-  float: right;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 30%;
+
+  &__image {
+    width: 100%;
+    min-width: 200px;
+    min-height: 250px;
+    background-color: #bbf;
+  }
+
+  &__short-description {
+    margin: 10px;
+  }
+
+  &__title {
+    color: #33f;
+  }
+
+  &__genre {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%;
+  }
+
+  &__year {
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 30%;
+  }
+
 }

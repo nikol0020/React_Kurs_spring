@@ -4,18 +4,18 @@ import dumbData from '../dumbData.js';
 
 import Header from '../header';
 import Footer from '../footer';
-import Container from "../container/Container";
+import List from "../list";
 
-export default class App extends Component {
+const App = () => {
 
-    render() {
-        return (
-            <div className="app">
-                <h1>React Todo App!</h1>
-                <Header/>
-                <Container data={dumbData}/>
-                <Footer/>
-            </div>
-        );
-    }
+    return (
+        <div className="app">
+            <h1>React Todo App!</h1>
+            <Header/>
+            <List data={dumbData}/>
+            <Footer/>
+        </div>
+    );
 }
+
+export default App;
