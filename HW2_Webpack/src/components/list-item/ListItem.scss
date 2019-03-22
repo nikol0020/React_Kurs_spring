@@ -1,30 +1,29 @@
 .list-item {
   width: 150px;
-  height: 300px;
+  height: 320px;
   background-color: #fcc;
   margin: 20px;
-
-  &__image {
-    min-width: 150px;
-    min-height: 200px;
-    background-color: #bbf;
-  }
-
-  &__short-description {
-    margin: 10px;
-  }
-
-  &__title {
-    color: #33f;
-  }
-
-  &__genre {
-    float: left;
-  }
-
-  &__year {
-    float: right;
-  }
-
 }
-
+.list-item__image {
+  min-width: 150px;
+  min-height: 200px;
+  background-color: #bbf;
+}
+.list-item__short-description {
+  margin: 10px;
+}
+.list-item__title {
+   color: #33f;
+ }
+.list-item__genre {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50%;
+}
+.list-item__year {
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 30%;
+}

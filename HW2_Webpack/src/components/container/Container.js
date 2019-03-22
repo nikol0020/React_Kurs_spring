@@ -8,7 +8,7 @@ export default class Container extends Component {
     render(){
         return (
             <div className='container'>
-                <List/>
+                <List data={ this.props.data }/>
             </div>
         )
     }

@@ -1,8 +1,5 @@
 .list {
   display: flex;
-
-  &__item{
-    list-style: none;
-  }
-
+  flex-wrap: wrap;
+  list-style-type: none;
 }
