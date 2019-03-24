@@ -1,15 +1,22 @@
 .header {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 275px;
   background-color: #aff;
   border: 1px solid #afd;
+  position: relative;
 
   &__panel{
     width: 100%;
     background-color: #aff;
     margin-top: 60px;
+  }
+
+  &__panel-plus {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
   }
 
 }

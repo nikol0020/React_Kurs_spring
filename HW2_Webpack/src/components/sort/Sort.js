@@ -5,7 +5,7 @@ export default class Sort extends Component {
     render() {
         return (
             <div className="sort">
-                <span>Sort by</span>
+                <span className="sort__text">Sort by</span>
                 <input className="sort__buttons" type="button" value="release date"/>
                 <input className="sort__buttons" type="button" value="rating"/>
             </div>

@@ -17,6 +17,7 @@ export default class Header extends Component {
                     <Search data={this.state}/>
                     <Sort  data={this.state}/>
                 </div>
+                <div className="header__panel-plus"></div>
             </div>
         );
     }
