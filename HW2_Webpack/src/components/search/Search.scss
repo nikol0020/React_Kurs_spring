@@ -14,7 +14,16 @@
   }
 
   &__box {
-    margin: 50px 125px -10px;
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  &__count {
+    width: 300px;
+    min-width: 300px;
+    min-height: 50px;
+    margin-top: 25px;
+    float: left;
   }
 
   &__buttons-wraper {
@@ -33,9 +42,10 @@
     &:hover {
       cursor: pointer;
     }
-
-    &-search {
-      width: 110px;
-    }
   }
+
+  &__count-qty {
+    margin-right: 15px;
+  }
+
 }
