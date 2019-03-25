@@ -17,7 +17,7 @@ export default class Search extends Component {
         const filteredList = this.props.data.data.filter((item) => {
 
             return ( key === 'title') ? (item.title.toLowerCase().search(val.toLowerCase()) !== -1 ) :
-                                        (item.genres.some((elem) => elem.toLowerCase().search(val.toLowerCase()) !== -1));
+                (item.genres.some((elem) => elem.toLowerCase().search(val.toLowerCase()) !== -1));
         });
 
         this.setState({data: filteredList, count: filteredList.length});
@@ -46,3 +46,4 @@ export default class Search extends Component {
         )
     }
 };
+
