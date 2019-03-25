@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import './List.scss';
 import ListItem from '../list-item';
 import PropTypes from 'prop-types';
-import ErrorBoundary from '../error-boundary';
+//import ErrorBoundary from '../error-boundary';
 
 export default class List extends Component {
 
@@ -14,9 +14,7 @@ export default class List extends Component {
 
             return (
                 <li key={id}>
-                    <ErrorBoundary>
                         <ListItem {...itemProps} />
-                    </ErrorBoundary>
                 </li>
             )
         });

@@ -23,7 +23,7 @@ const ListItem = (props) => {
 ListItem.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
-    genres: PropTypes.string,
+    genres: PropTypes.arrayOf(PropTypes.string),
     release_date: PropTypes.string,
     poster_path: PropTypes.string
 };
