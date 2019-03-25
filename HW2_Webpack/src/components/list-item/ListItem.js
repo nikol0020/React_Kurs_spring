@@ -3,12 +3,12 @@ import './ListItem.scss';
 
 const ListItem = (props) => {
 
-    const {id, title, genres, release_date} = props;
+    const {id, title, genres, release_date, poster_path} = props;
 
     return (
 
         <div className="list-item" key={ id }>
-            <img src="#" alt="picture" className="list-item__image"/>
+            <img src={poster_path} alt="picture" className="list-item__image"/>
             <div className="list-item__short-description">
                 <h4 className="list-item__title">{ title }</h4>
                 <span className="list-item__genre">{ genres }</span>

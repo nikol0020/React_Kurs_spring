@@ -26,7 +26,6 @@ export default class App extends Component {
         return (
 
             <div className="app">
-                <h1>React Todo App!</h1>
                 <Header data={dumbData} />
                 <List data={dumbData}/>
                 <Footer/>
