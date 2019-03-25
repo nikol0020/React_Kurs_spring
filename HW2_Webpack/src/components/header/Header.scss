@@ -1,16 +1,14 @@
 .header {
   width: 100%;
   height: 275px;
-  background-color: #a3a;
-  border: 1px solid #a5a;
+  background-color: #aff;
+  border: 1px solid #afd;
   position: relative;
-  color: #aaa;
 
   &__panel{
     width: 100%;
-    background-color: #a3a;
+    background-color: #aff;
     margin-top: 60px;
- //   background:#aff url('../../images/header_background.jpg') no-repeat fixed center;
   }
 
   &__panel-plus {

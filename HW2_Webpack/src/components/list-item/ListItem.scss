@@ -1,21 +1,22 @@
 .list-item {
   width: 200px;
-  height: 420px;
-  background-color: #ddd;
+  height: 360px;
+  background-color: #fcc;
   margin: 20px;
-  color: #333;
-  border: 1px solid #a7a;
 
   &__image {
     width: 100%;
-    height: 315px;
     min-width: 200px;
-    min-height: 300px;
+    min-height: 250px;
     background-color: #bbf;
   }
 
   &__short-description {
     margin: 10px;
+  }
+
+  &__title {
+    color: #33f;
   }
 
   &__genre {
@@ -29,7 +30,7 @@
     float: right;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 45%;
+    width: 30%;
   }
 
 }
