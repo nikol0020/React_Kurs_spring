@@ -1,30 +1,36 @@
 import React, {Component} from "react";
 import './App.scss';
 import dumbData from '../dumbData.js';
-import PropTypes from 'prop-types';
-import ErrorBoundary from '../error-boundary';
+import Search from '../search';
+//import * as axios  from 'axios';
 
 import Header from '../header';
 import Footer from '../footer';
 import List from "../list";
 
-
 export default class App extends Component {
+
+    // state = {
+    //     dumbData: []
+    // };
+    //
+    // componentDidMount() {
+    //     axios.get(`https://jsonplaceholder.typicode.com/users`)
+    //         .then(res => {
+    //             const dumbData = res.data;
+    //             this.setState({ dumbData });
+    //         });
+    // }
 
     render() {
         return (
 
             <div className="app">
-                <ErrorBoundary>
-                    <Header data={dumbData}/>
-                    <List data={dumbData}/>
-                    <Footer/>
-                </ErrorBoundary>
+                <h1>React Todo App!</h1>
+                <Header data={dumbData} />
+                <List data={dumbData}/>
+                <Footer/>
             </div>
         )
     }
-};
-
-App.propTypes = {
-    dumbData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
