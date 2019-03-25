@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './ListItem.scss';
 
+import PropTypes from 'prop-types';
+
 const ListItem = (props) => {
 
     const {id, title, genres, release_date, poster_path} = props;
@@ -16,6 +18,14 @@ const ListItem = (props) => {
             </div>
         </div>
     )
+};
+
+ListItem.propTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    genres: PropTypes.string,
+    release_date: PropTypes.string,
+    poster_path: PropTypes.string
 };
 
 export default ListItem;

@@ -1,22 +1,7 @@
 import React, {Component} from "react";
 import './Search.scss';
-import PropTypes from 'prop-types';
-
-
 
 export default class Search extends Component {
-
-    // static propTypes = {
-    //     count: (props, propName, componentName) => {
-    //         const value = props[propName];
-    //
-    //         if (typeof  value === 'number' && !isNaN(value)) {
-    //             return null;
-    //         }
-    //
-    //         return new TypeError(`${componentName}: ${propName} must be number`);
-    //     }
-    // };
 
     constructor(props) {
         super(props);
@@ -61,3 +46,4 @@ export default class Search extends Component {
         )
     }
 };
+

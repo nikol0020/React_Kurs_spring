@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './List.scss';
 import ListItem from '../list-item';
+import PropTypes from 'prop-types';
 
 export default class List extends Component {
 
@@ -23,4 +24,8 @@ export default class List extends Component {
             </ul>
         )
     }
-}
+};
+
+List.propTypes = {
+    elements: PropTypes.node
+};

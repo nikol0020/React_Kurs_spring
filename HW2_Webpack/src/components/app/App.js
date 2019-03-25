@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './App.scss';
 import dumbData from '../dumbData.js';
-import Search from '../search';
+import PropTypes from 'prop-types';
 //import * as axios  from 'axios';
 
 import Header from '../header';
@@ -32,4 +32,8 @@ export default class App extends Component {
             </div>
         )
     }
+};
+
+App.propTypes = {
+    dumbData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
