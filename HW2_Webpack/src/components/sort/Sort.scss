@@ -1,0 +1,22 @@
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 50px;
+
+  &__text, &__buttons {
+    z-index: 1;
+  }
+
+  &__buttons {
+    padding: 7px 15px;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

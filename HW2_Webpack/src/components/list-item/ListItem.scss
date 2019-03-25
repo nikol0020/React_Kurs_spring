@@ -1,0 +1,36 @@
+.list-item {
+  width: 200px;
+  height: 360px;
+  background-color: #fcc;
+  margin: 20px;
+
+  &__image {
+    width: 100%;
+    min-width: 200px;
+    min-height: 250px;
+    background-color: #bbf;
+  }
+
+  &__short-description {
+    margin: 10px;
+  }
+
+  &__title {
+    color: #33f;
+  }
+
+  &__genre {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%;
+  }
+
+  &__year {
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 30%;
+  }
+
+}

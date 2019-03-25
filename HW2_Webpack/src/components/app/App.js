@@ -1,0 +1,36 @@
+import React, {Component} from "react";
+import './App.scss';
+import dumbData from '../dumbData.js';
+import Search from '../search';
+//import * as axios  from 'axios';
+
+import Header from '../header';
+import Footer from '../footer';
+import List from "../list";
+
+export default class App extends Component {
+
+    // state = {
+    //     dumbData: []
+    // };
+    //
+    // componentDidMount() {
+    //     axios.get(`https://jsonplaceholder.typicode.com/users`)
+    //         .then(res => {
+    //             const dumbData = res.data;
+    //             this.setState({ dumbData });
+    //         });
+    // }
+
+    render() {
+        return (
+
+            <div className="app">
+                <h1>React Todo App!</h1>
+                <Header data={dumbData} />
+                <List data={dumbData}/>
+                <Footer/>
+            </div>
+        )
+    }
+};
