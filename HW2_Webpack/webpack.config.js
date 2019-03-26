@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = (env, argv) => {
     return {
         mode: env.production ? 'production' : 'development',
+        devtool: "source-map",
         entry: "./src/index.js",
         output: {
             path: path.join(__dirname, "/dist"),

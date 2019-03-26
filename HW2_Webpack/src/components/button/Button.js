@@ -1,10 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Button.scss';
 
-export default class Button extends Component {
-    render(){
-        return(
-            <input type="text" className="button" disabled></input>
-        )
-    }
-}
+import PropTypes from 'prop-types';
+
+const Button = ({value, active, onClick}) => (
+    <input
+        type="button"
+        className={active ? 'button button--active' : 'button'}
+        value={value}
+        onClick={onClick}
+    />
+);
+
+Button.propTypes = {
+    value: PropTypes.string,
+    active: PropTypes.string,
+    onClick: PropTypes.func
+};
+
+
+export default Button;

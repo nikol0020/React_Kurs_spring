@@ -1,3 +1,3 @@
-import Sort from './sort';
+import Sort from './Sort.js';
 
 export default Sort;

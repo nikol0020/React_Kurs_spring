@@ -1,32 +1,25 @@
-import React, {Component} from "react";
+import React from "react";
 import './List.scss';
+//import '../propTypes';
 import ListItem from '../list-item';
-import PropTypes from 'prop-types';
-//import ErrorBoundary from '../error-boundary';
 
-export default class List extends Component {
+const List = (props) => {
 
-    render() {
+    const elements = props.data.map((item) => {
 
-        const elements = this.props.data.map((item) => {
-
-            const {id, ...itemProps} = item;
-
-            return (
-                <li key={id}>
-                        <ListItem {...itemProps} />
-                </li>
-            )
-        });
-
+        const {id, ...itemProps} = item;
         return (
-            <ul className="list">
-                {elements}
-            </ul>
+            <li key={id}>
+                <ListItem {...itemProps} > </ListItem>
+            </li>
         )
-    }
+    });
+
+    return (
+        <ul className="list">
+            {elements}
+        </ul>
+    )
 };
 
-List.propTypes = {
-    elements: PropTypes.node
-};
+export default List;

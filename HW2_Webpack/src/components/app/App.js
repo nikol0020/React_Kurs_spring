@@ -1,28 +1,25 @@
-import React, {Component} from "react";
+import React from "react";
 import './App.scss';
 import dumbData from '../dumbData.js';
-import PropTypes from 'prop-types';
-//import ErrorBoundary from '../error-boundary';
+import ErrorBoundary from '../error-boundary';
 
 import Header from '../header';
 import Footer from '../footer';
 import List from "../list";
 
 
-export default class App extends Component {
+const App = () => {
 
-    render() {
-        return (
+    return (
 
-            <div className="app">
-                    <Header data={dumbData}/>
-                    <List data={dumbData}/>
-                    <Footer/>
-            </div>
-        )
-    }
+        <div className="app">
+            <ErrorBoundary>
+                <Header data={dumbData}/>
+                <List data={dumbData}/>
+                <Footer/>
+            </ErrorBoundary>
+        </div>
+    )
 };
 
-App.propTypes = {
-    dumbData: PropTypes.arrayOf(PropTypes.object)
-};
+export default App;
