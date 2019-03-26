@@ -14,7 +14,7 @@ const Button = ({value, active, onClick}) => (
 
 Button.propTypes = {
     value: PropTypes.string,
-    active: PropTypes.string,
+    active: PropTypes.boolean,
     onClick: PropTypes.func
 };
 
