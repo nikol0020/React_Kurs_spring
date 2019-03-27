@@ -13,8 +13,8 @@ const Button = ({value, active, onClick}) => (
 );
 
 Button.propTypes = {
-    value: PropTypes.string,
-    active: PropTypes.string,
+    value: PropTypes.string.isRequired,
+    active: PropTypes.bool,
     onClick: PropTypes.func
 };
 

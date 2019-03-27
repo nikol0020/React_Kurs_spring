@@ -22,10 +22,10 @@ const ListItem = (props) => {
 };
 
 ListItem.propTypes = {
-    title: PropTypes.string,
-    genres: PropTypes.arrayOf(PropTypes.string),
-    release_date: PropTypes.string,
-    poster_path: PropTypes.string
+    title: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+    release_date: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired
 };
 
 export default ListItem;

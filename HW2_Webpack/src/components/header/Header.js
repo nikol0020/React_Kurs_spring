@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Header.scss';
 import Search from '../search';
 import Sort from '../sort';
+import '../propTypes';
 
 const Header = (props) => {
 

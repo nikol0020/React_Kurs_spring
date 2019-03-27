@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const propTypes = {
+const movieShape = PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
     tagline: PropTypes.string,
@@ -12,12 +12,11 @@ const propTypes = {
     budget: PropTypes.number,
     revenue: PropTypes.number,
     genres: PropTypes.arrayOf(PropTypes.string),
-    runtime: PropTypes.number,
-    data: PropTypes.arrayOf(PropTypes.object()),
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    defaultValue: PropTypes.string,
-    onChange: PropTypes.func
+    runtime: PropTypes.number
+});
+
+const propTypes = {
+    data: PropTypes.arrayOf(movieShape)
 };
 
 export default propTypes;

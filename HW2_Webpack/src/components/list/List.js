@@ -1,6 +1,6 @@
 import React from "react";
 import './List.scss';
-//import '../propTypes';
+import '../propTypes';
 import ListItem from '../list-item';
 
 const List = (props) => {

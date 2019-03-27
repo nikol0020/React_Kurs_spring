@@ -7,16 +7,12 @@
   margin-top: 20px;
   margin-left: 50px;
 
-  &__text, &__buttons {
+  &__text {
     z-index: 1;
   }
 
   &__buttons {
     padding: 7px 15px;
     border-radius: 5px;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
