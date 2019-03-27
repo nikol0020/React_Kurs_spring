@@ -11,13 +11,14 @@ export default class Search extends Component {
             filter: 'TITLE',
             searchTxt: ''
         };
-    }
+    };
 
     getFilteredData = filter => {
         const key = filter.toLowerCase();
         const filteredList = this.props.data.data.filter((item) => {
 
-            return ( key === 'title') ? (item.title.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1 ) :
+            return ( key === 'title') ?
+                (item.title.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1 ) :
                 (item.genres.some((elem) => elem.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1));
         });
         return filteredList
