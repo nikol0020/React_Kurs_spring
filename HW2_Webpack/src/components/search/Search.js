@@ -1,7 +1,8 @@
 import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import './Search.scss';
 import Button from '../button';
-import '../propTypes';
+import { movieShape } from '../propTypes';
 
 export default class Search extends Component {
 
@@ -15,7 +16,7 @@ export default class Search extends Component {
 
     getFilteredData = filter => {
         const key = filter.toLowerCase();
-        const filteredList = this.props.data.data.filter((item) => {
+        const filteredList = this.props.data.filter((item) => {
 
             return ( key === 'title') ?
                 (item.title.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1 ) :
@@ -67,5 +68,9 @@ export default class Search extends Component {
             </div>
         )
     }
+};
+
+Search.propTypes = {
+    data : PropTypes.arrayOf(movieShape)
 };
 

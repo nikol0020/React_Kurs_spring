@@ -1,6 +1,7 @@
 import React from "react";
 import './List.scss';
-import '../propTypes';
+import {movieShape} from '../propTypes';
+import PropTypes from 'prop-types';
 import ListItem from '../list-item';
 
 const List = (props) => {
@@ -20,6 +21,10 @@ const List = (props) => {
             {elements}
         </ul>
     )
+};
+
+List.propTypes = {
+    data: PropTypes.arrayOf(movieShape)
 };
 
 export default List;

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './Sort.scss';
+import { movieShape } from '../propTypes';
+import PropTypes from 'prop-types';
 
 import Button from '../button';
 
@@ -14,3 +16,7 @@ export default class Sort extends Component {
         )
     }
 }
+
+Sort.propTypes = {
+    data: PropTypes.arrayOf(movieShape)
+};

@@ -1,22 +1,16 @@
 import PropTypes from 'prop-types';
 
-const movieShape = PropTypes.shape({
-    id: PropTypes.number,
-    title: PropTypes.string,
+export const movieShape = PropTypes.shape({
+    id: PropTypes.number.isRequir,
+    title: PropTypes.string.isRequire,
     tagline: PropTypes.string,
-    vote_average: PropTypes.number,
-    vote_count: PropTypes.number,
-    release_date: PropTypes.string,
-    poster_path: PropTypes.string,
-    overview: PropTypes.string,
+    vote_average: PropTypes.number.isRequire,
+    vote_count: PropTypes.number.isRequire,
+    release_date: PropTypes.string.isRequire,
+    poster_path: PropTypes.string.isRequire,
+    overview: PropTypes.string.isRequire,
     budget: PropTypes.number,
-    revenue: PropTypes.number,
-    genres: PropTypes.arrayOf(PropTypes.string),
-    runtime: PropTypes.number
+    revenue: PropTypes.number.isRequire,
+    genres: PropTypes.arrayOf(PropTypes.string).isRequire,
+    runtime: PropTypes.number.isRequire
 });
-
-const propTypes = {
-    data: PropTypes.arrayOf(movieShape)
-};
-
-export default propTypes;
