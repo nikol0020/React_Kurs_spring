@@ -13,7 +13,7 @@ export default class Search extends Component {
         };
     };
 
-    getFilteredData = filter => {
+/*    getFilteredData = filter => {
         const key = filter.toLowerCase();
         const filteredList = this.props.data.data.filter((item) => {
 
@@ -22,18 +22,20 @@ export default class Search extends Component {
                 (item.genres.some((elem) => elem.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1));
         });
         return filteredList
-    };
+    };*/
 
     changeFilter = e => {
         this.setState({filter: e.target.value});
     };
 
     changeSearchTxt = e => {
+        const filteredData = this.props.getFilteredData(this.state.filter);
         this.setState({searchTxt: e.target.value});
+        this.props.getFilteredData ( filteredData);
     };
 
     render() {
-        const filteredData = this.getFilteredData(this.state.filter);
+        //const filteredData = this.getFilteredData(this.state.filter);
         return (
             <div className="search__box">
                 <span className="search__text">FIND YOUR MOVIE</span>
@@ -61,7 +63,7 @@ export default class Search extends Component {
                         />
                 </div>
                 <div className="search__count">
-                    <span className="search__count-qty">{filteredData.length}</span>
+                    <span className="search__count-qty">{this.props.data.length}</span>
                     <span className="search__text">movies found</span>
                 </div>
             </div>
