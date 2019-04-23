@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import './App.scss';
-import dumbData from '../dumbData.js';
+//import dumbData from '../dumbData.js';
 import ErrorBoundary from '../error-boundary';
-import { bindActionCreators } from 'react-redux';
-import { connect } from 'react-redux';
+// import { bindActionCreators } from 'react-redux';
+// import { connect } from 'react-redux';
 
 import Header from '../header';
 import Footer from '../footer';
@@ -35,20 +35,20 @@ class App extends Component {
 
         <div className="app">
             <ErrorBoundary>
-                <Header data={dumbData} filteredItems={this.props.getFilteredData}/>
-                <List data={dumbData}/>
+                <Header/>
+                <List/>
                 <Footer/>
             </ErrorBoundary>
         </div>
     )};
 };
 
-function mapStateToProps(state) {
-    return {
-        data: state.movies
-    };
-};
+// function mapStateToProps(state) {
+//     return {
+//         data: state.movies
+//     };
+// };
 
-export default connect(mapStateToProps)(App);
+export default App;
 
 

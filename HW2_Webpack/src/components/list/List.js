@@ -1,25 +1,38 @@
-import React from "react";
+import React, {Component}from "react";
 import './List.scss';
 import '../propTypes';
 import ListItem from '../list-item';
+//import { bindActionCreators } from 'redux';
+import {connect} from 'react-redux';
 
-const List = (props) => {
+class List extends Component {
 
-    const elements = props.data.map((item) => {
+    elements() {
+        return this.props.movie.map((item) => {
 
-        const {id, ...itemProps} = item;
+            const {id, ...itemProps} = item;
+            return (
+                <li key={id}>
+                    <ListItem {...itemProps} > </ListItem>
+                </li>
+            )
+        });
+    };
+
+    render() {
         return (
-            <li key={id}>
-                <ListItem {...itemProps} > </ListItem>
-            </li>
+            <ul className="list">
+                {this.elements()}
+            </ul>
         )
-    });
+    }
+}
+;
 
-    return (
-        <ul className="list">
-            {elements}
-        </ul>
-    )
+function mapStateToProps(state) {
+    return {
+        movie: state.movies
+    };
 };
 
-export default List;
+export default connect(mapStateToProps)(List);

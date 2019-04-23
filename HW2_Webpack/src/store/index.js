@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import dataDB from './reducers';
-//import dumbData from '../components/dumbData'
+//import dataDB from './reducers';
+import DataReducer from '../components/dumbData'
 
 const allReducers = combineReducers({
-    movies: dataDB
+    movies: DataReducer
 });
 
 export default allReducers;
