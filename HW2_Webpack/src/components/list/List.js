@@ -1,9 +1,10 @@
-import React, {Component}from "react";
+import React, {Component} from "react";
 import './List.scss';
 import '../propTypes';
 import ListItem from '../list-item';
-//import { bindActionCreators } from 'redux';
+import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {select} from '../../store/actions/index';
 
 class List extends Component {
 
@@ -12,7 +13,7 @@ class List extends Component {
 
             const {id, ...itemProps} = item;
             return (
-                <li key={id}>
+                <li onClick={() => this.props.select(item)} key={id}>
                     <ListItem {...itemProps} > </ListItem>
                 </li>
             )
@@ -26,8 +27,7 @@ class List extends Component {
             </ul>
         )
     }
-}
-;
+};
 
 function mapStateToProps(state) {
     return {
@@ -35,4 +35,8 @@ function mapStateToProps(state) {
     };
 };
 
-export default connect(mapStateToProps)(List);
+function matchDispatchToProps(dispatch) {
+    return bindActionCreators({select: select}, dispatch)
+};
+
+export default connect(mapStateToProps, matchDispatchToProps)(List);

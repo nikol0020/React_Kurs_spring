@@ -7,7 +7,8 @@ import ErrorBoundary from '../error-boundary';
 
 import Header from '../header';
 import Footer from '../footer';
-import List from "../list";
+import List from '../list';
+import ListDetails from '../list/ListDetails';
 
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
             <ErrorBoundary>
                 <Header/>
                 <List/>
+                <ListDetails/>
                 <Footer/>
             </ErrorBoundary>
         </div>
