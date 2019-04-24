@@ -21,6 +21,7 @@
 
   &__short-description {
     margin: 10px;
+    position: relative;
   }
 
   &__genre {
@@ -31,8 +32,11 @@
   }
 
   &__year {
-    float: right;
+    position: absolute;
+    bottom: -75px;
+    right: 0;
     color: #a3a;
+
   }
 
 }

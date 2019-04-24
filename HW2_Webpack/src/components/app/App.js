@@ -37,8 +37,8 @@ class App extends Component {
         <div className="app">
             <ErrorBoundary>
                 <Header/>
-                <List/>
                 <ListDetails/>
+                <List/>
                 <Footer/>
             </ErrorBoundary>
         </div>
