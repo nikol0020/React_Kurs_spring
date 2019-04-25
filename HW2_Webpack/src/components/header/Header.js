@@ -9,7 +9,7 @@ const Header = (props) => {
     return (
         <div className="header">
             <div className="header__panel">
-                <Search data={props}/>
+                <Search/>
                 <Sort data={props}/>
             </div>
             <div className="header__panel-plus"></div>

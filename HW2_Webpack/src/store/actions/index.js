@@ -4,3 +4,10 @@ export const select = (movie) => {
         payload: movie
     }
 };
+
+export const searchFilter = (filteredList) => {
+    return {
+        type: "SEARCH_MOVIES",
+        payload: filteredList
+    }
+};

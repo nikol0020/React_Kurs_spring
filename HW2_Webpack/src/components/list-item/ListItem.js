@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import './ListItem.scss';
 import PropTypes from 'prop-types';
 
-const ListItem = (props) => {
+const ListItem = ({title, genres, release_date, poster_path}) => {
 
-    const {title, genres, release_date, poster_path} = props;
     const genre = genres.map(item => `${item} `);
 
     return (

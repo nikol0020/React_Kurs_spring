@@ -26,7 +26,7 @@ class ListDetails extends Component {
                     </div>
                     <p className='list-details__overview'>{this.props.movie.overview}</p>
                 </div>
-                <div className='list-details__genre'>Film by {this.props.movie.genres.map(item => `${item} `)}</div>
+              {/*  <div className='list-details__genre'>Film by {this.props.movie.genres.map(item => `${item} `)}</div>*/}
             </div>
         )
     }

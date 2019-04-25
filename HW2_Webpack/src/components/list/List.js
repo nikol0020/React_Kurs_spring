@@ -9,7 +9,7 @@ import {select} from '../../store/actions/index';
 class List extends Component {
 
     elements() {
-        return this.props.movie.map((item) => {
+        return this.props.movies.map((item) => {
 
             const {id, ...itemProps} = item;
             return (
@@ -31,7 +31,8 @@ class List extends Component {
 
 function mapStateToProps(state) {
     return {
-        movie: state.movies
+  //      searchFilter: state.searchFilter,
+        movies: state.movies
     };
 };
 
@@ -40,3 +41,6 @@ function matchDispatchToProps(dispatch) {
 };
 
 export default connect(mapStateToProps, matchDispatchToProps)(List);
+
+
+/******переделать на функцию ****/
