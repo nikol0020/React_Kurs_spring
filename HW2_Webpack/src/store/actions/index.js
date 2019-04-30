@@ -11,3 +11,10 @@ export const searchFilter = (filteredList) => {
         payload: filteredList
     }
 };
+
+export const sortByDate = (sortByDate) => {
+    return {
+        type: "SORT_BY_DATE",
+        payload: sortByDate
+    }
+};

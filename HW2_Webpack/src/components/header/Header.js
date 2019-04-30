@@ -4,13 +4,13 @@ import Search from '../search';
 import Sort from '../sort';
 import '../propTypes';
 
-const Header = (props) => {
+const Header = () => {
 
     return (
         <div className="header">
             <div className="header__panel">
                 <Search/>
-                <Sort data={props}/>
+                <Sort/>
             </div>
             <div className="header__panel-plus"></div>
         </div>

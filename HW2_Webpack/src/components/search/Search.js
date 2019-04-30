@@ -74,8 +74,8 @@ class Search extends Component {
                         <span>SEARCH BY</span>
                         <Button
                             value="TITLE"
-                            //   active={"TITLE" === this.state.filter}
-                            //  onClick={this.changeFilter}
+                           //    active={"TITLE" === this.state.filter}
+                           //   onClick={this.changeFilter}
                         />
                         <Button
                             value="GENRE"
@@ -101,7 +101,6 @@ class Search extends Component {
 };
 
 function mapStateToProps(state) {
-
     return {
         movies: state.movies
     }
