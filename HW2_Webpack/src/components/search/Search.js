@@ -10,17 +10,17 @@ class Search extends Component {
 
     getFilteredData (filterSearch) {
         //   const key = changeSearchTxt().toLowerCase();
-        console.log('seartTXT22222--------',  filterSearch);
+        console.log('seartTXT--------',  filterSearch);
         const filteredList = this.props.movies.filter((item) => {
 
             //    return ( key === 'title') ?
-            return   (item.title.toLowerCase().search(filterSearch.toLowerCase()) !== -1 )
+            return   (item.title.toLowerCase().search(filterSearch.toLowerCase()) !== -1 );
             //          (item.genres.some((elem) => elem.toLowerCase().search(this.state.changeSearchTxt.toLowerCase()) !== -1));
         });
-        console.log('seart333333333--------',  filteredList);
+        console.log('seartDATA--------',  filteredList);
      //   this.props.searchFilter = {filteredList};
     //    this.setState({searchFilter: filteredList});
-        return filteredList;
+        return this.props.searchFilter(filteredList);
     };
 
 

@@ -30,8 +30,10 @@ class List extends Component {
 };
 
 function mapStateToProps(state) {
+    if (state.searchFilter.movies) {
+        return {movies: state.searchFilter.movies}
+    }
     return {
-  //      searchFilter: state.searchFilter,
         movies: state.movies
     };
 };
