@@ -12,9 +12,16 @@ export const searchFilter = (filteredList) => {
     }
 };
 
-export const sortByDate = (sortByDate) => {
+export const changeFilter = (value) => {
     return {
-        type: "SORT_BY_DATE",
-        payload: sortByDate
+        type: "SEARCH_TYPE",
+        payload: value
+    }
+};
+
+export const sortMovies = (sortMovies) => {
+    return {
+        type: "SORT_MOVIES",
+        payload: sortMovies
     }
 };

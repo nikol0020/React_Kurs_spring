@@ -1,20 +1,30 @@
-const initialState = '';
+export const initialState = {
+    movies: null,
+    changeFilter: 'TITLE'
+};
 
 export default function (state = initialState, action) {
     switch (action.type) {
         case 'SEARCH_MOVIES':
-            console.log ('searchMovies---------', action.payload);
             return {
                 ...state,
                 movies: action.payload
             };
             break;
-        case 'SORT_BY_DATE':
-            console.log ('sortMovies1111111111--------', action.payload);
+
+        case 'SEARCH_TYPE':
+            return {
+                changeFilter: action.payload
+            };
+            break;
+
+        case 'SORT_MOVIES':
             return {
                 ...state,
                 movies: action.payload
             };
+            break;
+
         default:
             return state;
     }
