@@ -32,17 +32,14 @@ class Sort extends Component {
                 <span className="sort__text">Sort by</span>
                 <Button className="button"
                         value="rel-s date"
-                        active=""
+                        active={false}
                         onClick={() => {
                             this.sortByDate()
-                        }}
-                        ref={(active) => {
-                            this.changeSearchActive = active
                         }}
                 />
                 <Button className="button"
                         value="rating"
-                        active=""
+                        active={false}
                         onClick={() => {
                             this.sortByRating()
                         }}

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import './List.scss';
 import '../propTypes';
 import ListItem from '../list-item';
@@ -6,27 +6,25 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {select} from '../../store/actions/index';
 
-class List extends Component {
+const List = (props) => {
 
-    elements() {
-        return this.props.movies.map((item) => {
+    const elements = () => {
+        return props.movies.map((item) => {
 
             const {id, ...itemProps} = item;
             return (
-                <li onClick={() => this.props.select(item)} key={id}>
+                <li onClick={() => props.select(item)} key={id}>
                     <ListItem {...itemProps} > </ListItem>
                 </li>
             )
         });
     };
 
-    render() {
-        return (
-            <ul className="list">
-                {this.elements()}
-            </ul>
-        )
-    }
+    return (
+        <ul className="list">
+            {elements()}
+        </ul>
+    )
 };
 
 function mapStateToProps(state) {
@@ -40,6 +38,3 @@ function matchDispatchToProps(dispatch) {
 };
 
 export default connect(mapStateToProps, matchDispatchToProps)(List);
-
-
-/******переделать на функцию ****/
