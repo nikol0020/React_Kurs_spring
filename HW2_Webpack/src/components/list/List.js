@@ -29,7 +29,7 @@ const List = (props) => {
 
 function mapStateToProps(state) {
     return {
-        movies: state.searchFilter.movies ? state.searchFilter.movies : state.movies
+        movies: state.searchFilter.movies ? state.searchFilter.movies : state.movies.movies
     };
 };
 

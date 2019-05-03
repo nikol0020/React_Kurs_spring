@@ -66,9 +66,9 @@ class Search extends Component {
 
 function mapStateToProps(state) {
     return {
-        movies: state.movies,
+        movies: state.movies.movies,
         typeFilter: state.searchFilter.changeFilter,
-        count: state.searchFilter.movies == null ? state.movies.length : state.searchFilter.movies.length
+        count: state.searchFilter.movies == null ? state.movies.movies.length : state.searchFilter.movies.length
     }
 };
 

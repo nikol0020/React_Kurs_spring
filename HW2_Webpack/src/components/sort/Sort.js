@@ -20,7 +20,7 @@ class Sort extends Component {
     sortByRating = () => {
         return this.props.sortMovies(
             this.props.movies.sort((a, b) => {
-                return (a.vote_average < b.vote_average) ? 1 : -1;
+                return (a.vote_count < b.vote_count) ? 1 : -1;
             })
         );
     };
@@ -51,7 +51,7 @@ class Sort extends Component {
 
 function mapStateToProps(state) {
     return {
-        movies: state.movies
+        movies: state.movies.movies
     }
 };
 

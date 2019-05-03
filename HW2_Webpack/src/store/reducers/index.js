@@ -1,6 +1,5 @@
 import {combineReducers} from 'redux';
-//import dataDB from './reducers';
-import DataReducer from '../../components/dumbData';
+import DataReducer from '../../components/dataReducer';
 import ActiveMovie from './movieActive';
 import SearchReducer from './searchMovies';
 
