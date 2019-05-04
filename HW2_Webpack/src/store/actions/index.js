@@ -24,7 +24,7 @@ export const changeFilter = (value) => {
 export const sortMovies = (sortMovies) => {
     return {
         type: "SORT_MOVIES",
-        payload: sortMovies
+        payload: sortMovies.slice(0)
     }
 };
 
@@ -51,7 +51,7 @@ export const fetchMoviesFailure = (error) => {
 };
 
 export const fetchMovies = (dispatch) => {
-    console.log('start fetch....')
+    console.log('start fetch....');
     return dispatch => {
         dispatch(fetchMoviesBegin());
 

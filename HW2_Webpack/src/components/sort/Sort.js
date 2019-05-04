@@ -9,7 +9,6 @@ import {sortMovies} from '../../store/actions/index';
 class Sort extends Component {
 
     sortByDate = () => {
-
         return this.props.sortMovies(
             this.props.movies.sort((a, b) => {
                 return (a.release_date < b.release_date) ? 1 : -1;
@@ -20,11 +19,12 @@ class Sort extends Component {
     sortByRating = () => {
         return this.props.sortMovies(
             this.props.movies.sort((a, b) => {
-                return (a.vote_count < b.vote_count) ? 1 : -1;
+                return (a.id < b.id) ? 1 : -1;
             })
         );
     };
 
+    //vote_count
 
     render() {
         return (

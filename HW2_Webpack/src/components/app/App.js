@@ -31,8 +31,6 @@ class App extends Component {
 
 const mapStateToProps = state => ({
     movies: state.movies.movies,
-    loading: state.movies.loading,
-    error: state.movies.error
 });
 
 export default connect(mapStateToProps)(App);
