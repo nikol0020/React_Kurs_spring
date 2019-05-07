@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import './App.scss';
 import ErrorBoundary from '../error-boundary';
- import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import{fetchMovies} from '../../store/actions'
 
 import Header from '../header';
 import Footer from '../footer';
 import List from '../list';
 import ListDetails from '../list/ListDetails';
+import {Route} from 'react-router-dom';
 
 
 class App extends Component {
@@ -16,18 +17,21 @@ class App extends Component {
     }
 
     render() {
-    return (
+        return (
 
-        <div className="app">
-            <ErrorBoundary>
-                <Header/>
-                <ListDetails/>
-                <List/>
-                <Footer/>
-            </ErrorBoundary>
-        </div>
-    )};
-};
+            <div className="app">
+                <ErrorBoundary>
+                        <Header/>
+                        <ListDetails/>
+                        < Route path='/' component={List}/>
+                        < Route path='`/movies/${id}`' component={ListDetails}/>
+                        <Footer/>
+                </ErrorBoundary>
+            </div>
+        )
+    };
+}
+;
 
 const mapStateToProps = state => ({
     movies: state.movies.movies,

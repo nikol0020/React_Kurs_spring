@@ -24,7 +24,7 @@ export const changeFilter = (value) => {
 export const sortMovies = (sortMovies) => {
     return {
         type: "SORT_MOVIES",
-        payload: sortMovies.slice(0)
+        payload: sortMovies.slice()
     }
 };
 
