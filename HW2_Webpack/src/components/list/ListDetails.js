@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './ListDetails.scss';
+import{fetchMovieById} from '../../store/actions'
+import {bindActionCreators} from 'redux';
 
 
 class ListDetails extends Component {
-    render() {
+    componentDidMount = () => {
+        const {id} = this.props.match.params;
+        this.props.fetchMovieById(id);
+    };
 
+    render() {
         if (!this.props.movie) {
             return (
                 <p>Choose movie</p>
             )
         }
-
-        //  const genre = this.props.movie.genres.map(item => `${item} `);
+        const genre = this.props.movie.genres.map(item => `${item} `);
         return (
             <div className='list-details'>
                 <div className='list-details__picture'>
@@ -26,7 +31,7 @@ class ListDetails extends Component {
                     </div>
                     <p className='list-details__overview'>{this.props.movie.overview}</p>
                 </div>
-              {/*  <div className='list-details__genre'>Film by {this.props.movie.genres.map(item => `${item} `)}</div>*/}
+                <div className='list-details__genre'>Film by {this.props.movie.genres.map(item => `${item} `)}</div>
             </div>
         )
     }
@@ -34,8 +39,13 @@ class ListDetails extends Component {
 
 function mapStateToProps(state) {
     return {
-        movie: state.active
-    }
-}
+        movie: state.movies.movie,
+        movies:  state.movies.movies
+    };
+};
 
-export default connect(mapStateToProps)(ListDetails);
+function matchDispatchToProps(dispatch) {
+    return bindActionCreators({fetchMovieById: fetchMovieById}, dispatch)
+};
+
+export default connect(mapStateToProps, matchDispatchToProps)(ListDetails);

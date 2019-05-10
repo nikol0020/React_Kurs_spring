@@ -6,6 +6,7 @@ import ErrorPage from '../error-page'
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {select} from '../../store/actions/index';
+import {Link} from 'react-router-dom';
 
 const List = (props) => {
 
@@ -20,8 +21,10 @@ const List = (props) => {
 
             const {id, ...itemProps} = item;
             return (
-                <li onClick={() => props.select(item)} key={id}>
-                    <ListItem {...itemProps} > </ListItem>
+                <li key={id}>
+                    <Link to ={`/movie/${id}`}>
+                        <ListItem {...itemProps} > </ListItem>
+                    </Link>
                 </li>
             )
         });
@@ -38,6 +41,7 @@ function mapStateToProps(state) {
     return {
         movies: state.searchFilter.movies ? state.searchFilter.movies : state.movies.movies,
         error: state.movies.error
+
     };
 };
 

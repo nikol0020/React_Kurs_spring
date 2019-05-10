@@ -21,22 +21,18 @@ class App extends Component {
 
             <div className="app">
                 <ErrorBoundary>
-                        <Header/>
-                        <ListDetails/>
-                        < Route path='/' component={List}/>
-                        < Route path='`/movies/${id}`' component={ListDetails}/>
-                        <Footer/>
+                    <Header/>
+                    < Route exact path='/' component={List}/>
+                    < Route exact path='/movie/:id' component={ListDetails}/>
+                    <Footer/>
                 </ErrorBoundary>
             </div>
         )
-    };
-}
-;
+    }
+};
 
 const mapStateToProps = state => ({
     movies: state.movies.movies,
 });
 
 export default connect(mapStateToProps)(App);
-
-

@@ -35,8 +35,13 @@ export const fetchMoviesBegin = () => {
     }
 };
 
+export const fetchMovieBegin = () => {
+    return {
+        type: 'FETCH_MOVIE_BEGIN'
+    }
+};
+
 export const fetchMoviesSuccess = (movies) => {
-    console.log('start action fetchSuccess', movies);
     return {
         type: 'FETCH_MOVIES_SUCCESS',
         payload: movies
@@ -46,6 +51,20 @@ export const fetchMoviesSuccess = (movies) => {
 export const fetchMoviesFailure = (error) => {
     return {
         type: 'FETCH_MOVIES_FAILURE',
+        payload: error
+    }
+};
+
+export const fetchMovieSuccess = (movie) => {
+    return {
+        type: 'FETCH_MOVIE_SUCCESS',
+        payload: movie
+    }
+}
+
+export const fetchMovieFailure = (error) => {
+    return {
+        type: 'FETCH_MOVIE_FAILURE',
         payload: error
     }
 };
@@ -63,6 +82,21 @@ export const fetchMovies = (dispatch) => {
             })
             .catch(err => {
                 dispatch(fetchMoviesFailure(err));
+            });
+    };
+};
+
+export const fetchMovieById = ( id) => {
+    return dispatch => {
+        dispatch(fetchMovieBegin());
+        axios
+            .get(`https://reactjs-cdp.herokuapp.com/movies/${id}`, {
+            })
+            .then(res => {
+                dispatch(fetchMovieSuccess(res.data));
+            })
+            .catch(err => {
+                dispatch(fetchMovieFailure(err));
             });
     };
 };

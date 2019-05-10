@@ -5,9 +5,16 @@ export const initialState = {
 };
 
 export default function (state = initialState, action) {
-    console.log('all dbReduser starts...', action);
     switch (action.type) {
         case 'FETCH_MOVIES_BEGIN':
+            console.log('ReducerBegin.....');
+            return {
+                ...state,
+                loading: true,
+                error: null
+            };
+            break;
+        case 'FETCH_MOVIE_BEGIN':
             console.log('ReducerBegin.....');
             return {
                 ...state,
@@ -29,6 +36,23 @@ export default function (state = initialState, action) {
                 loading: false,
                 error: action.payload,
                 movies: []
+            };
+
+        case 'FETCH_MOVIE_SUCCESS':
+            console.log('ReducerSuccess Movie .....');
+            return {
+                ...state,
+                loading: false,
+                movie: action.payload
+            };
+            break;
+
+        case 'FETCH_MOVIE_FAILURE':
+            return {
+                ...state,
+                loading: false,
+                error: action.payload,
+                movie: null
             };
 
         default:
