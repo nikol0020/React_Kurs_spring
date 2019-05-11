@@ -17,7 +17,7 @@ class ListDetails extends Component {
                 <p>Choose movie</p>
             )
         }
-        const genre = this.props.movie.genres.map(item => `${item} `);
+
         return (
             <div className='list-details'>
                 <div className='list-details__picture'>

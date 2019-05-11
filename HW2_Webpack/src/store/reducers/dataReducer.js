@@ -7,7 +7,6 @@ export const initialState = {
 export default function (state = initialState, action) {
     switch (action.type) {
         case 'FETCH_MOVIES_BEGIN':
-            console.log('ReducerBegin.....');
             return {
                 ...state,
                 loading: true,
@@ -15,7 +14,6 @@ export default function (state = initialState, action) {
             };
             break;
         case 'FETCH_MOVIE_BEGIN':
-            console.log('ReducerBegin.....');
             return {
                 ...state,
                 loading: true,
@@ -23,7 +21,6 @@ export default function (state = initialState, action) {
             };
             break;
         case 'FETCH_MOVIES_SUCCESS':
-            console.log('ReducerSuccess.....');
             return {
                 ...state,
                 loading: false,
@@ -39,7 +36,6 @@ export default function (state = initialState, action) {
             };
 
         case 'FETCH_MOVIE_SUCCESS':
-            console.log('ReducerSuccess Movie .....');
             return {
                 ...state,
                 loading: false,

@@ -60,7 +60,7 @@ export const fetchMovieSuccess = (movie) => {
         type: 'FETCH_MOVIE_SUCCESS',
         payload: movie
     }
-}
+};
 
 export const fetchMovieFailure = (error) => {
     return {
@@ -75,8 +75,7 @@ export const fetchMovies = (dispatch) => {
         dispatch(fetchMoviesBegin());
 
         axios
-            .get(`https://reactjs-cdp.herokuapp.com/movies`, {
-            })
+            .get(`https://reactjs-cdp.herokuapp.com/movies`, {})
             .then(res => {
                 dispatch(fetchMoviesSuccess(res.data.data));
             })
@@ -86,12 +85,11 @@ export const fetchMovies = (dispatch) => {
     };
 };
 
-export const fetchMovieById = ( id) => {
+export const fetchMovieById = (id) => {
     return dispatch => {
         dispatch(fetchMovieBegin());
         axios
-            .get(`https://reactjs-cdp.herokuapp.com/movies/${id}`, {
-            })
+            .get(`https://reactjs-cdp.herokuapp.com/movies/${id}`, {})
             .then(res => {
                 dispatch(fetchMovieSuccess(res.data));
             })
