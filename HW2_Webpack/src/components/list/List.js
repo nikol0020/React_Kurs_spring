@@ -2,7 +2,7 @@ import React from "react";
 import './List.scss';
 import '../propTypes';
 import ListItem from '../list-item';
-import ErrorPage from '../error-page'
+import ErrorPage from '../error-page';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {select} from '../../store/actions/index';
@@ -12,7 +12,7 @@ const List = (props) => {
 
     if (props.error) {
         return (
-            <ErrorPage error='Page not found 404'/>
+            <ErrorPage error='Page not found 404  from List'/>
         )
     }
 
