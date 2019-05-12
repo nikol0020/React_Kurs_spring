@@ -9,7 +9,7 @@ import Header from '../header';
 import Footer from '../footer';
 import List from '../list';
 import ListDetails from '../list/ListDetails';
-import {Route, Switch, Link} from 'react-router-dom';
+import {Route, Switch, Link, Redirect} from 'react-router-dom';
 
 
 class App extends Component {
@@ -19,15 +19,16 @@ class App extends Component {
 
     render() {
         return (
-
             <div className="app">
                 <ErrorBoundary>
                     <Header/>
-                    <Link to="/errorPage" >Test Error Link</Link>
+                    <Link to="/404" >Test Error Link</Link>
+                    <Link to="/wrongPath" >Test Wrong Path</Link>
                     <Switch>
                         < Route exact path='/' component={List}/>
                         < Route exact path='/movie/:id' component={ListDetails}/>
-                        < Route component={ErrorPage}/>
+                        < Route exact path='/404' component={ErrorPage}/>
+                        < Redirect to="/404"/>
                     </Switch>
                     <Footer/>
                 </ErrorBoundary>

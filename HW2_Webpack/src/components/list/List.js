@@ -6,13 +6,13 @@ import ErrorPage from '../error-page';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {select} from '../../store/actions/index';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 const List = (props) => {
 
     if (props.error) {
         return (
-            <ErrorPage error='Page not found 404  from List'/>
+            <Redirect to = {'/404'}/>
         )
     }
 

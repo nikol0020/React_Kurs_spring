@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import './ListDetails.scss';
 import{fetchMovieById} from '../../store/actions'
 import {bindActionCreators} from 'redux';
+import {Redirect} from 'react-router-dom';
 
 
 class ListDetails extends Component {
@@ -12,6 +13,12 @@ class ListDetails extends Component {
     };
 
     render() {
+        if (this.props.error) {
+            return (
+                <Redirect to = {'/404'}/>
+            )
+        }
+
         if (!this.props.movie) {
             return (
                 <p>Choose movie</p>
@@ -40,7 +47,8 @@ class ListDetails extends Component {
 function mapStateToProps(state) {
     return {
         movie: state.movies.movie,
-        movies:  state.movies.movies
+        movies:  state.movies.movies,
+        error: state.movies.error
     };
 };
 
