@@ -1,42 +1,19 @@
-import React, {Component} from "react";
-import './Search.scss';
-import Button from '../button';
-import '../propTypes';
+import React from 'react';
+import Search from './Search';
+import Adapter from 'enzyme-adapter-react-16';
+import { shallow, configure } from 'enzyme';
 
-export default class Search extends Component {
+configure({ adapter: new Adapter() });
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            filter: 'TITLE',
-            searchTxt: ''
-        };
-    };
+describe('<Search /> shallow rendering', () => {
 
-/*    setFilteredData = filter => {
-        const key = filter.toLowerCase();
-        const filteredList = this.props.data.data.filter((item) => {
+    it('matches the snapshot Search', () => {
+        const wrapper = shallow(<Search />);
+        expect(wrapper).toMatchSnapshot();
+    });
 
-            return ( key === 'title') ?
-                (item.title.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1 ) :
-                (item.genres.some((elem) => elem.toLowerCase().search(this.state.searchTxt.toLowerCase()) !== -1));
-        });
-        return filteredList
-    };*/
-
-    changeFilter = e => {
-        this.setState({filter: e.target.value});
-    };
-
-    changeSearchTxt = e => {
-        const filteredData = this.props.setFilteredData(this.state.filter);
-        this.setState({searchTxt: e.target.value});
-        this.props.setFilteredData ( filteredData);
-    };
-
-    render() {
-        //const filteredData = this.setFilteredData(this.state.filter);
-        return (
+    it('should render a div', () => {
+        const wrapper = shallow(
             <div className="search__box">
                 <span className="search__text">FIND YOUR MOVIE</span>
                 <br/>
@@ -60,14 +37,14 @@ export default class Search extends Component {
                         value="SEARCH"
                         active={"SEARCH" === this.state.filter}
                         onClick={this.changeFilter}
-                        />
+                    />
                 </div>
                 <div className="search__count">
                     <span className="search__count-qty">{this.props.data.length}</span>
                     <span className="search__text">movies found</span>
                 </div>
             </div>
-        )
-    }
-};
-
+        );
+        expect(wrapper).toMatchSnapshot();
+    });
+});

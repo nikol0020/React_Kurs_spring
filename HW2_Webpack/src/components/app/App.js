@@ -17,7 +17,7 @@ export default class App extends Component {
         }
     }
 
-    getFilteredData = filter => {
+    setFilteredData = filter => {
         const key = filter.toLowerCase();
         const filteredList = this.props.data.data.filter((item) => {
 
@@ -34,7 +34,8 @@ export default class App extends Component {
 
         <div className="app">
             <ErrorBoundary>
-                <Header data={dumbData} filteredItems={this.props.getFilteredData}/>
+                <h1>React Todo App!!!</h1>
+                <Header data={dumbData} filteredItems={this.props.setFilteredData}/>
                 <List data={dumbData}/>
                 <Footer/>
             </ErrorBoundary>
