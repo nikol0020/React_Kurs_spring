@@ -29,7 +29,7 @@ export default class Search extends Component {
             <div className="search__box">
                 <span className="search__text">FIND YOUR MOVIE</span>
                 <br/>
-                <input className="search__input" type="text" placeholder="SEARCH" onChange={this.changeSearchTxt}/>
+                <input id="search__input" type="text" placeholder="SEARCH" onChange={this.changeSearchTxt}/>
                 <hr/>
                 <div className="search__buttons">
                     <div className="search__buttons-wrapper">

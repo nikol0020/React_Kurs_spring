@@ -31,7 +31,6 @@ export default class App extends Component {
 
     render() {
     return (
-
         <div className="app">
             <ErrorBoundary>
                 <h1>React Todo App!!!</h1>

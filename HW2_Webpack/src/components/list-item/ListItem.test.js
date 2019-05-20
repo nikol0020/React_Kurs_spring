@@ -1,16 +1,9 @@
 import React from 'react';
 import ListItem from './ListItem';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow, configure } from 'enzyme';
-
-configure({ adapter: new Adapter() });
+import { shallow } from 'enzyme';
 
 describe('<ListItem /> shallow rendering', () => {
-
-    // it('matches the snapshot List', () => {
-    //     const wrapper = shallow(<ListItem />);
-    //     expect(wrapper).toMatchSnapshot();
-    // });
 
     it('should render div', () => {
         const wrapper = shallow(

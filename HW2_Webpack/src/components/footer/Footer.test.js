@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow, mount, render, configure } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('<Footer /> shallow rendering', () => {
 
