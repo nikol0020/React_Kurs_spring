@@ -2,15 +2,12 @@ import React from 'react';
 import List from './List';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
+import '../propTypes';
+import ListItem from '../list-item';
 
 configure({ adapter: new Adapter() });
 
 describe('<List /> shallow rendering', () => {
-
-    it('matches the snapshot List', () => {
-        const wrapper = shallow(<List />);
-        expect(wrapper).toMatchSnapshot();
-    });
 
     it('should render a ul', () => {
         const wrapper = shallow(
@@ -19,8 +16,11 @@ describe('<List /> shallow rendering', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    // it('renders an `.list`', () => {
-    //     const wrapper = shallow(<App />);
-    //     expect(wrapper.find('.list')).to.have.lengthOf(1);
-    // });
+    it('should render a id', () => {
+        const wrapper = shallow(
+            <li id="id"></li>
+        );
+        expect(wrapper.prop('id')).toEqual('id');
+    });
+
 });

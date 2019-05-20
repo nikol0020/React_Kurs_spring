@@ -19,4 +19,5 @@ describe('<Button /> shallow rendering', () => {
         );
         expect(wrapper).toMatchSnapshot();
     });
+
 });

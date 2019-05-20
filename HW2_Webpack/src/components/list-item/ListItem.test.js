@@ -7,10 +7,10 @@ configure({ adapter: new Adapter() });
 
 describe('<ListItem /> shallow rendering', () => {
 
-    it('matches the snapshot List', () => {
-        const wrapper = shallow(<ListItem />);
-        expect(wrapper).toMatchSnapshot();
-    });
+    // it('matches the snapshot List', () => {
+    //     const wrapper = shallow(<ListItem />);
+    //     expect(wrapper).toMatchSnapshot();
+    // });
 
     it('should render div', () => {
         const wrapper = shallow(
@@ -35,15 +35,9 @@ describe('<ListItem /> shallow rendering', () => {
 
     it('should render a list-item__year', () => {
         const wrapper = shallow(
-            <span release_date="release_date" />
+            <span release_date="release_date"></span>
         );
         expect(wrapper.prop('release_date')).toEqual('release_date');
     });
 
-    // it('should render a img and a parent img', () => {
-    //     const wrapper = shallow(
-    //         <img poster_path="poster_path" parent="poster_path" />
-    //     );
-    //     expect(wrapper.prop('img')).toEqual('poster_path — poster_path');
-    // });
 });
