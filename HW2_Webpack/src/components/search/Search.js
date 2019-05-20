@@ -29,7 +29,7 @@ export default class Search extends Component {
             <div className="search__box">
                 <span className="search__text">FIND YOUR MOVIE</span>
                 <br/>
-                <input id="search__input" type="text" placeholder="SEARCH" onChange={this.changeSearchTxt}/>
+                <input className="search__input" id="searchInput" type="text" name="searchInput" placeholder="SEARCH" onChange={this.changeSearchTxt}/>
                 <hr/>
                 <div className="search__buttons">
                     <div className="search__buttons-wrapper">
@@ -38,11 +38,13 @@ export default class Search extends Component {
                             value="TITLE"
                             active={"TITLE" === this.state.filter}
                             onClick={this.changeFilter}
+                            id="buttonTitle"
                         />
                         <Button
                             value="GENRE"
                             active={"GENRE" === this.state.filter}
                             onClick={this.changeFilter}
+                            id="buttonGenre"
                         />
                     </div>
                     <Button
