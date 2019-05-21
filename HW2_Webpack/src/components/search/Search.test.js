@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow, mount, render, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 
 configure({ adapter: new Adapter() });
 
