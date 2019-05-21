@@ -9,5 +9,15 @@
 </head>
 <body>
     <div id="root"></div>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === 'complete') {
+                ReactDom.render(
+                    React.createElement(App, {}),
+                    document.getElementById('app')
+                );
+            }
+        }
+    </script>
 </body>
 </html>
