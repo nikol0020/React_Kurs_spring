@@ -16,6 +16,12 @@ const List = (props) => {
         )
     }
 
+    // initialState = {
+    //     movies: [],
+    //     loading: false,
+    //     error: null
+    // };
+
     const elements = () => {
         return props.movies.map((item) => {
 
