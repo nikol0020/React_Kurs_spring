@@ -30,8 +30,25 @@ describe('when click buttonGenre', () => {
 
     beforeEach(() => {
         wrapper.find('#buttonTitle').simulate('click', {
-            state: { //1
-                filter: valueFilter
+            target: {
+                value: valueFilter
+            },
+        });
+    });
+
+    it('updates filter field in state', () => {
+        expect(wrapper.state().filter).toEqual(valueFilter)
+    })
+});
+
+describe('when click buttonGenre', () => {
+    const valueFilter = 'GENRE';
+    const wrapper = shallow(<Search />);
+
+    beforeEach(() => {
+        wrapper.find('#buttonGenre').simulate('click', {
+            target: {
+                value: valueFilter
             },
         });
     });
