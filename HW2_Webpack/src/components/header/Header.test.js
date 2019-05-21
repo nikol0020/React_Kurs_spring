@@ -13,4 +13,8 @@ describe('<Header /> shallow rendering', () => {
         );
         expect(wrapper).toMatchSnapshot();
     });
+    // it('should render Search', () => {
+    //     const wrapper = shallow(<Search/>);
+    //     expect(wrapper).toMatchSnapshot();
+    // });
 });

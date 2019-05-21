@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> shallow rendering matches the snapshot Button 1`] = `
+<input
+  className="button"
+  type="button"
+/>
+`;
+
+exports[`<Button /> shallow rendering should render a input 1`] = `<input />`;

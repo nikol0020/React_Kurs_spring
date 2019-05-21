@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sort /> shallow rendering matches the snapshot Sort 1`] = `
+<div
+  className="sort"
+>
+  <span
+    className="sort__text"
+  >
+    Sort by
+  </span>
+  <Button
+    className="button"
+    value="rel-s date"
+  />
+  <Button
+    className="button"
+    value="rating"
+  />
+</div>
+`;
+
+exports[`<Sort /> shallow rendering should render a div 1`] = `
+<div
+  className="sort"
+/>
+`;

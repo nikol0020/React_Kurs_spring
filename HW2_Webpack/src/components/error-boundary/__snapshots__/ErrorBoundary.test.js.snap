@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBoundary /> shallow rendering should render ErrorBoundary 1`] = `""`;
+
+exports[`<ErrorBoundary /> shallow rendering should render a h1 1`] = `
+<h1>
+  Something went wrong.
+</h1>
+`;

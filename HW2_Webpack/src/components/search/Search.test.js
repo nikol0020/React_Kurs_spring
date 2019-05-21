@@ -22,3 +22,21 @@ describe('<Search /> shallow rendering', () => {
     });
 
 });
+
+
+describe('when click buttonGenre', () => {
+    const valueFilter = 'TITLE';
+    const wrapper = shallow(<Search />);
+
+    beforeEach(() => {
+        wrapper.find('#buttonTitle').simulate('click', {
+            state: { //1
+                filter: valueFilter
+            },
+        });
+    });
+
+    it('updates filter field in state', () => {
+        expect(wrapper.state().filter).toEqual(valueFilter)
+    })
+});

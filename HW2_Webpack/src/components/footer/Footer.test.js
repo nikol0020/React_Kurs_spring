@@ -19,7 +19,7 @@ describe('<Footer /> shallow rendering', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('<div>Something went wrong.</div>', () => {
+    it(' <div>React Todo App !!!</div>', () => {
         const wrapper = shallow(
             <div>React Todo App !!!</div>
         );

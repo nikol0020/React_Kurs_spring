@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> shallow rendering should render a ul 1`] = `
+<ul
+  className="list"
+/>
+`;

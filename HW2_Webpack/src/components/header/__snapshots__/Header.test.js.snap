@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> shallow rendering matches the snapshot Header 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="header__panel"
+  >
+    <Search
+      data={Object {}}
+    />
+    <Sort
+      data={Object {}}
+    />
+  </div>
+  <div
+    className="header__panel-plus"
+  />
+</div>
+`;
+
+exports[`<Header /> shallow rendering should render a div 1`] = `
+<div
+  className="header"
+/>
+`;

@@ -54,7 +54,7 @@ export default class Search extends Component {
                         />
                 </div>
                 <div className="search__count">
-                    <span className="search__count-qty">{this.props.data.length}</span>
+                    <span className="search__count-qty"></span>
                     <span className="search__text">movies found</span>
                 </div>
             </div>
