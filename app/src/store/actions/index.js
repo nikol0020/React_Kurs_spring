@@ -85,6 +85,7 @@ export const fetchMovies = (dispatch) => {
     };
 };
 
+/*
 export const fetchMovieById = (id) => {
     return dispatch => {
         dispatch(fetchMovieBegin());
@@ -97,4 +98,4 @@ export const fetchMovieById = (id) => {
                 dispatch(fetchMovieFailure(err));
             });
     };
-};
+};*/
