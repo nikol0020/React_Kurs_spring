@@ -26,8 +26,8 @@ class App extends Component {
                     <Link to="/404" >Test Error Link</Link>
                     <Link to="/wrongPath" >Test Wrong Path</Link>
                     <Switch>
-                        {/*< Route exact path='/' component={EmptyPage}/>*/}
-                        < Route exact path='/' component={List}/>
+                        < Route exact path='/' component={EmptyPage}/>
+                        < Route exact path='/movies' component={List}/>
                         < Route exact path='/movie/:id' component={ListDetails}/>
                         < Route exact path='/404' component={ErrorPage}/>
                         < Redirect to="/404"/>

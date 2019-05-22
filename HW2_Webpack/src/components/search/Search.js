@@ -3,6 +3,7 @@ import './Search.scss';
 import Button from '../button';
 import '../propTypes';
 import {connect} from 'react-redux';
+import {Link, Redirect} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {searchFilter} from '../../store/actions/index';
 import {changeFilter} from '../../store/actions/index';
@@ -49,11 +50,13 @@ class Search extends Component {
                             onClick={() => this.getSearchType(event.target.value)}
                         />
                     </div>
-                    <Button
-                        value="SEARCH"
-                        // active={"SEARCH" === this.state.filter}
-                        onClick={() => this.getFilteredData(this.changeSearchInput.value, this.props.typeFilter)}
-                    />
+                    <Link to={`/movies`}>
+                        <Button
+                            value="SEARCH"
+                            // active={"SEARCH" === this.state.filter}
+                            onClick={() => this.getFilteredData(this.changeSearchInput.value, this.props.typeFilter)}
+                        />
+                    </Link>
                 </div>
                 <div className="search__count">
                     <span className="search__count-qty">{this.props.count}</span>
@@ -68,7 +71,7 @@ function mapStateToProps(state) {
     return {
         movies: state.movies.movies,
         typeFilter: state.searchFilter.changeFilter,
-        count: state.searchFilter.movies == null ? state.movies.movies.length : state.searchFilter.movies.length
+        count: state.searchFilter.movies == null ? 0 : state.searchFilter.movies.length
     }
 };
 
