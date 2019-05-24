@@ -7,14 +7,4 @@ describe('<Header /> shallow rendering', () => {
         const wrapper = shallow(<Header/>);
         expect(wrapper).toMatchSnapshot();
     });
-    it('should render a div', () => {
-        const wrapper = shallow(
-            <div className="header"></div>
-        );
-        expect(wrapper).toMatchSnapshot();
-    });
-    // it('should render Search', () => {
-    //     const wrapper = shallow(<Search/>);
-    //     expect(wrapper).toMatchSnapshot();
-    // });
 });

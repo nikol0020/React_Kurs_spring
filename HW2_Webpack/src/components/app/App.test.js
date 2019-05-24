@@ -9,7 +9,7 @@ describe('App Component', () => {
         expect(shallow(<App />).find('div.app').exists()).toBe(true)
     });
 
-    it('<h1>React Todo App!!!</h1>', () => {
+    it('<h1>React Todo App!!!</h1> in <App />', () => {
         const wrapper = shallow(<App />);
         expect(wrapper.find('h1').text()).toBe('React Todo App!!!');
     });

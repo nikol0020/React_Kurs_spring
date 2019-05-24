@@ -5,25 +5,15 @@ import { shallow } from 'enzyme';
 
 describe('<Footer /> shallow rendering', () => {
 
-    it('should render Footer', () => {
+    it('matches the snapshot Footer', () => {
         const wrapper = shallow(<Footer />);
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('should render a div', () => {
-        const wrapper = shallow(
-            <div className="footer">
-                <div className='footer__text'>React Todo App !!!</div>
-            </div>
-        );
-        expect(wrapper).toMatchSnapshot();
-    });
 
-    it(' <div>React Todo App !!!</div>', () => {
-        const wrapper = shallow(
-            <div>React Todo App !!!</div>
-        );
-        expect(wrapper.find('div').text()).toBe('React Todo App !!!');
+    it('<h2>React Todo App !!!</h2>', () => {
+        const wrapper = shallow(<Footer />);
+        expect(wrapper.find('h2').text()).toBe('React Todo App !!!');
     });
 
 });

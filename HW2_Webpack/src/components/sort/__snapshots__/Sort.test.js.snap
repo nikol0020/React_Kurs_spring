@@ -19,9 +19,3 @@ exports[`<Sort /> shallow rendering matches the snapshot Sort 1`] = `
   />
 </div>
 `;
-
-exports[`<Sort /> shallow rendering should render a div 1`] = `
-<div
-  className="sort"
-/>
-`;

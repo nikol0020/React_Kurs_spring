@@ -35,7 +35,7 @@
     "react-addons-test-utils": "^15.6.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.29.6",
+    "webpack": "^4.32.2",
     "webpack-clean-plugin": "^0.2.3",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"

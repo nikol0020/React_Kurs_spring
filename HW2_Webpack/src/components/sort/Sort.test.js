@@ -17,10 +17,4 @@ describe('<Sort /> shallow rendering', () => {
         expect(wrapper.find('span').text()).toBe('Sort by');
     });
 
-    it('should render a div', () => {
-        const wrapper = shallow(
-            <div className="sort"></div>
-        );
-        expect(wrapper).toMatchSnapshot();
-    });
 });

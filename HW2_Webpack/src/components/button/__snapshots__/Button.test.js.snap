@@ -6,5 +6,3 @@ exports[`<Button /> shallow rendering matches the snapshot Button 1`] = `
   type="button"
 />
 `;
-
-exports[`<Button /> shallow rendering should render a input 1`] = `<input />`;

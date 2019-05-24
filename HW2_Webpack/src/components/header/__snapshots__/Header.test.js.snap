@@ -19,9 +19,3 @@ exports[`<Header /> shallow rendering matches the snapshot Header 1`] = `
   />
 </div>
 `;
-
-exports[`<Header /> shallow rendering should render a div 1`] = `
-<div
-  className="header"
-/>
-`;

@@ -1,25 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer /> shallow rendering should render Footer 1`] = `
+exports[`<Footer /> shallow rendering matches the snapshot Footer 1`] = `
 <div
   className="footer"
 >
-  <div
+  <h2
     className="footer__text"
   >
     React Todo App !!!
-  </div>
-</div>
-`;
-
-exports[`<Footer /> shallow rendering should render a div 1`] = `
-<div
-  className="footer"
->
-  <div
-    className="footer__text"
-  >
-    React Todo App !!!
-  </div>
+  </h2>
 </div>
 `;

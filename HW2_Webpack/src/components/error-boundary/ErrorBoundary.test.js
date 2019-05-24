@@ -12,18 +12,4 @@ describe('<ErrorBoundary /> shallow rendering', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('should render a h1', () => {
-        const wrapper = shallow(
-            <h1>Something went wrong.</h1>
-        );
-        expect(wrapper).toMatchSnapshot();
-    });
-
-    it('<h1>Something went wrong.</h1>', () => {
-        const wrapper = shallow(
-            <h1>Something went wrong.</h1>
-        );
-        expect(wrapper.find('h1').text()).toBe('Something went wrong.');
-    });
-
 });
