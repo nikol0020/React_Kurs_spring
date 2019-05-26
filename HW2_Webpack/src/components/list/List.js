@@ -2,7 +2,6 @@ import React from "react";
 import './List.scss';
 import '../propTypes';
 import ListItem from '../list-item';
-import ErrorPage from '../error-page';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {select} from '../../store/actions/index';
@@ -15,12 +14,6 @@ const List = (props) => {
             <Redirect to = {'/404'}/>
         )
     }
-
-    // initialState = {
-    //     movies: [],
-    //     loading: false,
-    //     error: null
-    // };
 
     const elements = () => {
         return props.movies.map((item) => {

@@ -15,7 +15,6 @@ class Search extends Component {
                 (item.title.toLowerCase().search(filterSearch.toLowerCase()) !== -1 ) :
                 (item.genres.some((elem) => elem.toLowerCase().search(filterSearch.toLowerCase()) !== -1));
         });
-        //    this.changeSearchInput.values = '';
         return this.props.searchFilter(filteredList);
     };
 

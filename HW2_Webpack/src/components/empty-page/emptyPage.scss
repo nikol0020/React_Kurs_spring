@@ -1,0 +1,13 @@
+.emptyMovies {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-evenly;
+  min-height: 450px;
+}
+
+.noMovies {
+  margin: auto;
+  font-size: 3em;
+  color: #a3a;
+}
