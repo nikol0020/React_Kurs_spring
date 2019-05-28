@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './ListItem.scss';
 import PropTypes from 'prop-types';
 
 const ListItem = ({title, genres, release_date, poster_path}) => {

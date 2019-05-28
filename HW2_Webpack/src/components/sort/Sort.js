@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './Sort.scss';
 import Button from '../button';
 import '../propTypes';
 import {connect} from 'react-redux';

@@ -1,5 +1,5 @@
 import React from "react";
-import './List.scss';
+//import './List.scss';
 import '../propTypes';
 import ListItem from '../list-item';
 import ErrorPage from '../error-page'
